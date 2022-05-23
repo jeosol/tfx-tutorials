@@ -1,2 +1,3 @@
 # tfx-tutorials
-Tutorials using Tensorflor TFX
+
+This repository focuses on Tensorflow TFX tutorials on tensorflow.org website
