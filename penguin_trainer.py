@@ -1,13 +1,13 @@
 
 from typing import List
 from absl import logging
-import tensorflow as tf 
+import tensorflow as tf
 from tensorflow import keras
 from tensorflow_transform.tf_metadata import schema_utils
 
 from tfx import v1 as tfx
 from tfx_bsl.public import tfxio
-from tensorflow_metadata.provo.v0 import schema_pb2
+from tensorflow_metadata.proto.v0 import schema_pb2
 
 _FEATURE_KEYS = [
     'culmen_length_mm', 'culmen_depth_mm', 'flipper_length_mm', 'body_mass_g'
@@ -27,6 +27,7 @@ _FEATURE_SPEC = {
        },
     _LABEL_KEY: tf.io.FixedLenFeature(shape=[1], dtype=tf.int64)
 }
+
 
 def _input_fn(file_pattern: List[str],
               data_accessor: tfx.components.DataAccessor,
